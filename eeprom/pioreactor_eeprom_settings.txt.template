@@ -31,7 +31,8 @@ vendor "Pioreactor Inc."
 product "Pioreactor HAT"
 
 # Custom binary data
-{current_time}
+time "{current_time}"
+serial_number "{serial_number}"
 ########################################################################
 # GPIO bank settings, set to nonzero to change from the default.
 # NOTE these setting can only be set per BANK, uncommenting any of

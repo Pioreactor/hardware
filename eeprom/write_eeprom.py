@@ -17,6 +17,7 @@ import re
 from datetime import datetime
 import click
 import subprocess
+import uuid
 
 
 @click.command()
@@ -28,10 +29,11 @@ def main(version):
     major, minor = version.split(".")
     version_as_hex_string = "0x" + major.zfill(3) + minor
     current_time = datetime.utcnow().isoformat()
+    serial_number = uuid.uuid4() # log me somewhere else
 
     with open("./pioreactor_eeprom_settings.txt.template", "r") as in_file:
         with open("./pioreactor_eeprom_settings.txt", "w") as out_file:
-            eeprom_text = in_file.read().format(product_version=version_as_hex_string, current_time=current_time)
+            eeprom_text = in_file.read().format(product_version=version_as_hex_string, current_time=current_time, serial_number=serial_number)
             out_file.write(eeprom_text)
     
     # 2. compile to .eep file.
@@ -45,6 +47,8 @@ def main(version):
     if output.returncode != 0:
         print("Exiting due to error.")
         return
+
+    return serial_number
 
 
 if __name__ == '__main__':
