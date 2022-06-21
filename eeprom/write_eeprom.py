@@ -6,12 +6,15 @@
 # 1. Run `cd eepromutils && make && sudo make install` to install eeprom utils if not already done.
 #
 # 2. this Python file should be placed in the raspberrypi/hats/eepromutils directory,
-# along with the eeprom_settings.txt.template file
+# 
+# 3. Place eeprom_settings.txt.template file in raspberrypi/hats/eepromutils directory
 # run with sudo, ex:
 #
 # > sudo python3 write_eeprom.py 0.2
 #
 # TODO: it may fail the first time?? Try again.
+# 
+# 4. Reboot
 #
 import re
 from datetime import datetime
