@@ -10,7 +10,7 @@ UUID=$(python -c "import uuid;print(str(uuid.uuid4()))")
 echo $UUID
 
 
-(cd /home/pioreactor/hats/eepromutils && python3 write_eeprom.py $VERSION $UUID)
+python3 hats/eeprom_utils/write_eeprom.py $VERSION $UUID)
 
-python3 HAT_tests.py
+python3 tests/HAT_tests.py
 
