@@ -155,11 +155,12 @@ def test_heating_pcb_connection() -> bool:
         return False
 
 
-def test_eeprom_is_written() -> bool:
+def test_eeprom_is_written(serial_number) -> bool:
     try:
-        with open("/proc/device-tree/hat/product_ver", "r") as f:
+        with open("/proc/device-tree/hat/uuid", "r") as f:
             text = f.read().rstrip("\x00")
-            return (int(text[-2]), int(text[-1])) and True
+            assert serial_number == text, "wrong serial_number provided"
+            return True
     except:
         return False
 
@@ -180,16 +181,30 @@ def test_pds() -> bool:
     return True
 
 def test_button() -> bool:
-    click.confirm("Press the button... did the LED light up?"):
+    click.confirm("Press the button... did the LED light up?")
     return True
 
+
+@click.command()
 def main() -> bool:
 
+    click.confirm("""Setup:
 
-    assert test_eeprom_is_written(), "EEPROM should have been written to."
+ - EEPROM should have been written to.
+
+ - Insert AS7341 from Adafruit into StemmaQT
+ - Attach 12V PSU into barrel jack
+ - Have a white LED nearby
+ - Heating PCB is attached
+ - PDs should be attached into channels 1 & 2
+
+Ready? """)
+
+    # unfortunately a reboot is required for the HAT data to show up in device-tree
+    # assert test_eeprom_is_written(serial_number), "EEPROM should have been written to."
+
     assert test_correct_i2c_channels_on_HAT()
     assert test_stemma_qt_is_available()
-
 
     # require manual testing
     assert test_leds()
@@ -210,16 +225,5 @@ def main() -> bool:
 
 
 if __name__ == "__main__":
-    click.confirm("""Setup:
-
- - EEPROM should have been written to...
-
- - Insert AS7341 from Adafruit into StemmaQT
- - Attach 12V PSU into barrel jack
- - Have a white LED nearby
- - Heating PCB is attached
- - PDs should be attached into channels 1 & 2
-
-Ready? """)
     main()
 
