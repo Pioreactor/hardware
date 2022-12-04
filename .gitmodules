@@ -1,0 +1,3 @@
+[submodule "hats"]
+	path = hats
+	url = https://github.com/raspberrypi/hats
