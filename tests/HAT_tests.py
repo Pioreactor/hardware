@@ -147,7 +147,7 @@ def test_heating_pcb_connection() -> bool:
 
     logger = create_logger("test_heating_pcb_connection", unit=unit, experiment=experiment, to_mqtt=False)
     try:
-        test_positive_correlation_between_temperature_and_heating(logger, unit, experiment)
+        test_positive_correlation_between_temperature_and_heating(None, logger, unit, experiment)
         click.echo("✅")
         return True
     except:

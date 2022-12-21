@@ -17,13 +17,13 @@ def main():
     click.echo(" ✅")
 
     click.echo("Testing heating and temperature correlation")
-    test_positive_correlation_between_temperature_and_heating(logger, unit, exp)
+    test_positive_correlation_between_temperature_and_heating(None, logger, unit, exp)
     click.echo(" ✅")
 
     click.echo("Hall sensor working?")
     click.echo("--> Wave both sides of a magnet in front of the Hall sensor")
 
-    GPIO.setup(hall_sensor_pin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+    GPIO.setup(HALL_SENSOR_PIN, GPIO.IN, pull_up_down=GPIO.PUD_UP)
     GPIO.wait_for_edge(HALL_SENSOR_PIN, GPIO.RISING)
     click.echo(" ✅")
     click.echo("Completed ✅✅✅")
