@@ -8,6 +8,7 @@ from pioreactor.utils.pwm import PWM
 from pioreactor.actions.self_test import test_positive_correlation_between_temperature_and_heating
 from pioreactor.logging import create_logger
 from pioreactor.background_jobs.od_reading import ADCReader,ALL_PD_CHANNELS
+import os
 
 unit = whoami.get_unit_name()
 experiment = whoami.UNIVERSAL_EXPERIMENT
@@ -140,7 +141,7 @@ def test_pwm() -> bool:
     return True
 
 def test_heating_pcb_connection() -> bool:
-    click.echo("Testing PCB connection")
+    click.echo("Testing heating PCB connection")
 
     # import test_hat, and run main()
     assert is_heating_pcb_present()
@@ -169,7 +170,6 @@ def test_pds() -> bool:
     adc_reader = ADCReader(
         channels=ALL_PD_CHANNELS,
         dynamic_gain=False,
-        initial_gain=16,  # I think a small gain is okay, since we only varying the lower-end of LED intensity
         fake_data=False,
     ).setup_adc()
 
@@ -197,14 +197,14 @@ def main() -> bool:
  - Have a white LED nearby
  - Heating PCB is attached
  - PDs should be attached into channels 1 & 2
+ - Stirring fan ready to test PWMs
 
 Ready? """)
 
-    # unfortunately a reboot is required for the HAT data to show up in device-tree
     # assert test_eeprom_is_written(serial_number), "EEPROM should have been written to."
-
     assert test_correct_i2c_channels_on_HAT()
     assert test_stemma_qt_is_available()
+    assert test_heating_pcb_connection()
 
     # require manual testing
     assert test_leds()
@@ -215,8 +215,6 @@ Ready? """)
     assert test_button()
 
 
-
-    assert test_heating_pcb_connection()
     click.echo("Test hat ✅")
     return True
 

@@ -7,12 +7,13 @@ export LC_ALL=C
 
 : ${1?"Usage: $0 HARDWARE_VERSION"}
 
-
+HARDWARE_VERSION=$1
 UUID=$(python -c "import uuid;print(str(uuid.uuid4()))")
 echo $UUID
+echo $HARDWARE_VERSION
 
 
-python3 hats/eeprom_utils/write_eeprom.py $HARDWARE_VERSION $UUID)
+(cd hats/eepromutils/; python3 write_eeprom.py $HARDWARE_VERSION $UUID)
 
-python3 tests/HAT_tests.py
+HARDWARE=$HARDWARE_VERSION python3 tests/HAT_tests.py
 

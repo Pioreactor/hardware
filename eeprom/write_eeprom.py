@@ -35,13 +35,13 @@ def main(version, serial_number):
     output = subprocess.run(["./eepmake", "pioreactor_eeprom_settings.txt", "hat.eep"])
     if output.returncode != 0:
         print("Exiting due to error in `./eepmake pioreactor_eeprom_settings.txt hat.eep`")
-        return
+        raise click.Abort()
 
     # 3. write to hat
     output = subprocess.run(["./eepflash.sh", "-w" ,"-f=hat.eep" ,"-t=24c32", "-y"])
     if output.returncode != 0:
         print("Exiting due to error in `./eepflash.sh -w -f=hat.eep -t=24c32 -y`")
-        return
+        raise click.Abort()
 
     return serial_number
 
