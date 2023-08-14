@@ -158,6 +158,7 @@ def test_pds() -> bool:
         channels=ALL_PD_CHANNELS,
         dynamic_gain=False,
         fake_data=False,
+        penalizer=0,
     ).setup_adc()
 
     while True:
