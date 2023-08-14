@@ -2,7 +2,7 @@
 
 #### Installation
 
-1. git clone this repo to your Raspberry Pi: `git clone https://github.com/Pioreactor/hardware.git && cd hardware`
+1. git clone this repo to your Raspberry Pi: `git clone --recurse-submodules https://github.com/Pioreactor/hardware.git && cd hardware`
 2. Install eeprom utils: `cd hats/eepromutils && make && sudo make install`
 3. Move some files over: `mv ../eeprom/write_eeprom.py . && mv ../eeprom/pioreactor_eeprom_settings.txt.template .`
 
