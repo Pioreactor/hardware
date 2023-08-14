@@ -17,3 +17,4 @@ echo $HARDWARE_VERSION
 
 HARDWARE=$HARDWARE_VERSION python3 tests/HAT_tests.py
 
+sudo shutdown -h now
