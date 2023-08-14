@@ -30,19 +30,6 @@ def test_leds() -> bool:
             break
 
 
-    click.echo("Insert white LED into LED channels. Alternate 0% to 100%")
-    click.echo("Ctrl-C to move on.")
-
-    while True:
-        try:
-            sleep(0.5)
-            led_intensity({'A': 0, 'B': 0, 'C': 0, 'D': 0}, verbose=False)
-            sleep(0.7)
-            led_intensity({'A': 100, 'B': 100, 'C': 100, 'D': 100}, verbose=False)
-        except KeyboardInterrupt:
-            print("break")
-            break
-
     return True
 
 def test_onboard_led() -> bool:
@@ -204,7 +191,6 @@ Ready? """)
     # assert test_eeprom_is_written(serial_number), "EEPROM should have been written to."
     assert test_correct_i2c_channels_on_HAT()
     assert test_stemma_qt_is_available()
-    assert test_heating_pcb_connection()
 
     # require manual testing
     assert test_leds()
@@ -213,6 +199,7 @@ Ready? """)
     assert test_pwm()
     assert test_pds()
     assert test_button()
+    assert test_heating_pcb_connection()
 
 
     click.echo("Test hat ✅")
