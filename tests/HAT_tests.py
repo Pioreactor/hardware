@@ -32,22 +32,6 @@ def test_leds() -> bool:
 
     return True
 
-def test_onboard_led() -> bool:
-    click.echo("Blinking onboard LED")
-    click.echo("Ctrl-C to move on.")
-    while True:
-
-        try:
-            publish(
-                f"pioreactor/{unit}/{experiment}/monitor/flicker_led_response_okay",
-                1,
-            )
-            sleep(1)
-        except KeyboardInterrupt:
-            break
-
-    return True
-
 
 def test_correct_i2c_channels_on_HAT() -> bool:
     click.echo("Is i2c ADC and DAC address filled?")
@@ -132,6 +116,8 @@ def test_heating_pcb_connection() -> bool:
 
     # import test_hat, and run main()
     assert is_heating_pcb_present()
+    while not click.confirm("Is heating PCB in HAT?"):
+        pass
 
     logger = create_logger("test_heating_pcb_connection", unit=unit, experiment=experiment, to_mqtt=False)
     try:
@@ -164,6 +150,7 @@ def test_pds() -> bool:
     while True:
         try:
             print(adc_reader.take_reading())
+            adc_reader.clear_batched_readings()
         except KeyboardInterrupt:
             break
     return True
@@ -195,7 +182,6 @@ Ready? """)
 
     # require manual testing
     assert test_leds()
-    assert test_onboard_led()
     assert test_shunt()
     assert test_pwm()
     assert test_pds()

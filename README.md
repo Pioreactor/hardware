@@ -4,9 +4,7 @@
 
 1. git clone this repo to your Raspberry Pi: `git clone --recurse-submodules https://github.com/Pioreactor/hardware.git && cd hardware`
 2. Install eeprom utils: `cd hats/eepromutils && make && sudo make install && cd ..`
-
-# I think this is wrong below?
-4. Move some files over: `mv ../eeprom/write_eeprom.py eepromutils/ && mv ../eeprom/pioreactor_eeprom_settings.txt.template eepromutils/`
+3. Move some files over: `mv ../eeprom/write_eeprom.py . && mv ../eeprom/pioreactor_eeprom_settings.txt.template .`
 
 
 #### Setting up a new HAT
