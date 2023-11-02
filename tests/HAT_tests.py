@@ -27,8 +27,8 @@ def test_leds() -> bool:
                 led_intensity({'A': i, 'B': i, 'C': i, 'D': i}, verbose=False)
                 sleep(0.1)
         except KeyboardInterrupt:
+            led_intensity({'A': 0, 'B': 0, 'C': 0, 'D': 0})
             break
-
 
     return True
 
