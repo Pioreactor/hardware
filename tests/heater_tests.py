@@ -31,10 +31,18 @@ def main():
 
     click.echo("Hall sensor working?")
     click.echo("--> Wave both sides of a magnet in front of the Hall sensor")
-    time.sleep(1)
-    while _edge_callback.tally() == 0: # not sure if this works.
-        print(f"saw {_edge_callback.tally()} pings")
-        time.sleep(1)
+
+    try:
+        while True:
+            while _edge_callback.tally() == 0:
+                pass
+            print("Detected 🎉")
+            print("Continue or Ctrl-C to exit")
+            print()
+            _edge_callback.reset_tally()
+    except KeyboardInterrupt:
+      pass
+
 
     _edge_callback.cancel()
     click.echo(" ✅")
