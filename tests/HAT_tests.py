@@ -15,15 +15,15 @@ experiment = whoami.UNIVERSAL_EXPERIMENT
 
 def test_leds() -> bool:
 
-    click.echo("Insert white LED into LED channels. Cycling through 0% to 80%.")
+    click.echo("Insert white LED into LED channels. Cycling through 0% to 50%.")
     click.echo("Ctrl-C to move on.")
 
     while True:
         try:
-            for i in range(0, 80, 10):
+            for i in range(0, 50, 10):
                 led_intensity({'A': i, 'B': i, 'C': i, 'D': i}, verbose=False)
                 sleep(0.1)
-            for i in range(80, 0, -10):
+            for i in range(50, 0, -10):
                 led_intensity({'A': i, 'B': i, 'C': i, 'D': i}, verbose=False)
                 sleep(0.1)
         except KeyboardInterrupt:

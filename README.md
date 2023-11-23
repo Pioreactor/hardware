@@ -2,9 +2,10 @@
 
 #### Installation
 
+0. Install git: `sudo apt-get install git -y`
 1. git clone this repo to your Raspberry Pi: `git clone --recurse-submodules https://github.com/Pioreactor/hardware.git && cd hardware`
 2. Install eeprom utils: `cd hats/eepromutils && make && sudo make install && cd ..`
-3. Move some files over: `mv ../eeprom/write_eeprom.py . && mv ../eeprom/pioreactor_eeprom_settings.txt.template .`
+3. Move some files over: `mv ../eeprom/write_eeprom.py eepromutils/ && mv ../eeprom/pioreactor_eeprom_settings.txt.template eepromutils/`
 
 
 #### Setting up a new HAT
