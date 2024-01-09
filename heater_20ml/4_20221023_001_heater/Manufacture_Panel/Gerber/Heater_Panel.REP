@@ -1,0 +1,152 @@
+*************************************************************
+FileName = Heater_Panel.GBR
+AutoAperture = True
+*************************************************************
+Generating : 01 - Primary
+      File : Heater_Panel.GTL
+
+    Adding Layer      : 01 - Primary
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D10
+    D11
+    D12
+    D13
+    D14
+    D15
+    D16
+    D17
+    D18
+    D19
+    D20
+    D21
+    D22
+    D23
+    D24
+    D25
+    D26
+    D27
+    D28
+*************************************************************
+
+*************************************************************
+Generating : Top Overlay
+      File : Heater_Panel.GTO
+
+    Adding Layer      : Top Overlay
+
+
+Used DCodes :
+    D24
+*************************************************************
+
+*************************************************************
+Generating : Top Paste
+      File : Heater_Panel.GTP
+
+    Adding Layer      : Top Paste
+
+    Adding Layer      : 01 - Primary
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D10
+    D13
+    D14
+    D15
+    D16
+    D17
+    D18
+    D19
+    D20
+    D21
+    D22
+    D23
+    D29
+*************************************************************
+
+*************************************************************
+Generating : Top Solder
+      File : Heater_Panel.GTS
+
+    Adding Layer      : Top Solder
+
+    Adding Layer      : 01 - Primary
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D30
+    D31
+    D32
+    D33
+    D34
+    D35
+    D36
+    D37
+    D38
+    D39
+    D40
+    D41
+    D42
+    D43
+*************************************************************
+
+*************************************************************
+Generating : M01_Board_Outline
+      File : Heater_Panel.GM1
+
+    Adding Layer      : M01_Board_Outline
+
+
+Used DCodes :
+*************************************************************
+
+*************************************************************
+Generating : M02_Board_Outline_Panel
+      File : Heater_Panel.GM2
+
+    Adding Layer      : M02_Board_Outline_Panel
+
+
+Used DCodes :
+    D24
+    D44
+    D45
+*************************************************************
+
+*************************************************************
+Generating : M05_00B_Master_Drawing_Notes
+      File : Heater_Panel.GM5
+
+    Adding Layer      : M05_00B_Master_Drawing_Notes
+
+
+Used DCodes :
+    D25
+    D46
+    D47
+    D48
+    D49
+*************************************************************
+
+*************************************************************
+Generating : Drill Drawing
+      File : Heater_Panel.GD1
+
+    Adding Drill Pair : 01 - Primary-02 - Secondary
+
+    Adding Layer      : Drill Drawing
+
+
+Used DCodes :
+    D45
+    D50
+*************************************************************
+
