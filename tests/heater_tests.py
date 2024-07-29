@@ -2,12 +2,13 @@ import click
 from pioreactor.actions.self_test import test_positive_correlation_between_temperature_and_heating
 from pioreactor.logging import create_logger
 from pioreactor.hardware import is_heating_pcb_present, HALL_SENSOR_PIN
+from pioreactor.hardware import GPIOCHIP
 import lgpio
 import time
 
 
 def main():
-    _handle = lgpio.gpiochip_open(0)
+    _handle = lgpio.gpiochip_open(GPIOCHIP)
     lgpio.gpio_claim_input(_handle, HALL_SENSOR_PIN, lgpio.SET_PULL_UP)
 
     lgpio.gpio_claim_alert(

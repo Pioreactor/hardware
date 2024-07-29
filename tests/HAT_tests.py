@@ -145,7 +145,8 @@ def test_pds() -> bool:
         dynamic_gain=False,
         fake_data=False,
         penalizer=0,
-    ).setup_adc()
+    )
+    adc_reader.tune_adc()
 
     while True:
         try:
