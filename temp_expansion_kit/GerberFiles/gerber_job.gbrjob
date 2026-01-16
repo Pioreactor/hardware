@@ -1,0 +1,24 @@
+{
+    "Header": {
+        "Comment": "All values are metric (mm)",
+        "CreationDate": "2024-05-03T18:30:29Z",
+        "GenerationSoftware": {
+            "Application": "Fusion Electronics",
+            "Vendor": "Autodesk",
+            "Version": "9.7.0"
+        },
+        "Part": "Single"
+    },
+    "Overall": {
+        "BoardThickness": 1.57,
+        "LayerNumber": 2,
+        "Name": {
+            "ProjectId": "TempPCB v41"
+        },
+        "Owner": "cam davidson pilon <cam.davidson.pilon@gmail.com>",
+        "Size": {
+            "X": 65,
+            "Y": 56.011325
+        }
+    }
+}

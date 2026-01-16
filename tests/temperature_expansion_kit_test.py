@@ -5,6 +5,7 @@ import board
 import digitalio
 import time
 
+
 spi = board.SPI()
 cs = digitalio.DigitalInOut(board.D5)  # Chip select of the MAX31865 board.
 sensor = MAX31865(

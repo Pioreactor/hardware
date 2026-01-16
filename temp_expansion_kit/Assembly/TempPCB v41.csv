@@ -1,0 +1,7 @@
+Qty,Value,Device,Package,Parts,Description,CATEGORY,DESCRIPTION,MANUFACTURER,MPN,OPERATING_TEMPERATURE,PARTREV,PART_STATUS,PITCH,ROHS_COMPLIANCE,SERIES,STANDARD,SUBCATEGORY,TYPE
+1,,SSQ-120-03-T-D,SAMTEC_SSQ-120-03-T-D,JP2,,,,"Samtec Inc.",,,R,,,,,"Manufacturer Recommendations",,
+2,0.1uF,CAP_CERAMIC0805-NOOUTLINE,0805-NO,"C1, C2","Ceramic Capacitors",,,,,,,,,,,,,
+1,10nF,CAP_CERAMIC0805-NOOUTLINE,0805-NO,C3,"Ceramic Capacitors",,,,,,,,,,,,,
+1,3A/250V,S3B-XH-A,S3B-XH-A,J2,,"Header ","Connector Header Through Hole"," (2.50mm) ","JST Sales America Inc. ","S3B-XH-A(LF)(SN) ","-25°C ~ 85°C",,Active," (2.50mm)","ROHS3 Compliant",XH,,"Rectangular Connectors "
+1,"4300Ω 0.1%",RESISTOR0805_NOOUTLINE,0805-NO,R1,Resistors,,,,,,,,,,,,,
+1,MAX31865,TEMP_MAX31865,QFN20_4MM_0.65MM,U1,"MAX31865 - Resistance to Digital Convertor for Platinum  Resistance Temperature Detectors (RTDs)",,,,,,,,,,,,,

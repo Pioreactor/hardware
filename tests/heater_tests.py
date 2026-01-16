@@ -3,7 +3,7 @@ from pioreactor.actions.self_test import test_positive_correlation_between_tempe
 from pioreactor.logging import create_logger
 from pioreactor.hardware import is_heating_pcb_present, HALL_SENSOR_PIN
 from pioreactor.hardware import GPIOCHIP
-import lgpio
+import lgpio # type: ignore
 import time
 
 
