@@ -1,0 +1,28 @@
+### Footprint positions - created on 2025-09-20T08:28:44-0400 ###
+### Printed by KiCad version 9.0.3
+## Unit = mm, Angle = deg.
+## Side : top
+# Ref     Val             Package                            PosX       PosY       Rot  Side
+C1        10nF            CAPC320X160X180L55N              9.5000    10.7000   90.0000  top
+C2        0.1_uF          CAPC100X50X55L25N                4.0000    16.4000   90.0000  top
+C3        1uF             CAPC320X160X180L55N              9.5000    15.5350   90.0000  top
+C4        0.1_uF          CAPC100X50X55L25N                4.5000    10.9500  -90.0000  top
+C5        10uF            CAPPM320X160X180L85X120N         2.2500    15.4000   90.0000  top
+D1        VEMD2000X01     VITEC_VEMD2000X01                6.5000     6.3800  180.0000  top
+D2        DF2S6.8MFS,L3M  SODFL100X60X45L17X30N            2.1000    19.8000  -90.0000  top
+D3        DF2S6.8MFS,L3M  SODFL100X60X45L17X30N            6.7000    19.9000  -90.0000  top
+D4        DF2S6.8MFS,L3M  SODFL100X60X45L17X30N            7.8000    19.9000  -90.0000  top
+D5        DF2S6.8MFS,L3M  SODFL100X60X45L17X30N            9.9000    19.9000  180.0000  top
+J1        BM04B-SRSS-TB   JST_BM04B-SRSS-TB                9.6500    24.5000  -90.0000  top
+J2        BM04B-SRSS-TB   JST_BM04B-SRSS-TB                3.8500    24.5000  -90.0000  top
+R1        3.01M           RESC100X50X40L25N               11.2000    10.7000   90.0000  top
+R2        49.9R           RESC100X50X40L25N               11.2000    13.1250   90.0000  top
+R3        47k             RESC100X50X40L25N                2.0000    11.9500  180.0000  top
+R4        49.9R           RESC100X50X40L25N                5.7000    19.6000   90.0000  top
+R5        49.9R           RESC100X50X40L25N                4.5000    19.6000   90.0000  top
+R6        49.9R           RESC100X50X40L25N               10.1000    18.6000  180.0000  top
+R7        47k             RESC100X50X40L25N                5.7500    30.4200  -90.0000  top
+R8        47k             RESC100X50X40L25N                7.2500    30.4200  -90.0000  top
+U1        TLV9101IDCK     SOP6-5P65_200X210X100L36X24N     6.5000    10.5000    0.0000  top
+U2        ADS1114IDGS     SOP10P50_300X490X110L55X22N      6.5000    15.6000    0.0000  top
+## End
